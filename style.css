@@ -138,10 +138,16 @@ a { color: inherit; }
 .footer-brand { display: flex; align-items: center; gap: 10px; color: var(--ink); font-size: .76rem; font-weight: 800; letter-spacing: .13em; }
 .footer-brand img { border-radius: 10px; }
 .footer-brand small { display: block; margin-top: 2px; color: var(--muted); font-size: .67rem; font-weight: 500; letter-spacing: .01em; }
-.footer-links { display: flex; gap: 10px; }
-.footer-links a { display: inline-flex; align-items: center; gap: 12px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 9px; color: var(--muted); font-size: .75rem; font-weight: 650; text-decoration: none; transition: border-color .18s, color .18s, background .18s; }
-.footer-links a:hover { border-color: var(--primary); color: var(--primary); background: var(--surface); }
-.footer-links a span { font-size: 1rem; line-height: 1; }
+.footer-links { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+.footer-links .social-link { display: inline-flex; align-items: center; gap: 9px; min-height: 43px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--ink); font-size: .78rem; font-weight: 600; text-decoration: none; transition: border-color .2s, background .2s, transform .2s; }
+.icons-social-media { display: block; flex: 0 0 20px; width: 20px; height: 20px; }
+.footer-links .social-link:hover { transform: translateY(-3px); border-color: var(--primary); }
+.footer-links .instagram:hover { background: #f8edf3; color: #7c3157; }
+.footer-links .github:hover { background: #edf0f2; color: #232b31; }
+.footer-links .whatsapp:hover { background: #eaf7ee; color: #1c6939; }
+[data-theme="dark"] .footer-links .instagram:hover { background: #4a2638; color: #ffd8e7; }
+[data-theme="dark"] .footer-links .github:hover { background: #31423b; color: #fff; }
+[data-theme="dark"] .footer-links .whatsapp:hover { background: #1c4930; color: #d8ffe3; }
 
 .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 :is(button, input, a):focus-visible { outline: 3px solid #dba862; outline-offset: 3px; }
