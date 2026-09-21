@@ -1,0 +1,6 @@
+{
+  "appId": "com.felipeoliveira17y.landmensure",
+  "appName": "Landmensure",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}
