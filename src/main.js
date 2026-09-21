@@ -94,13 +94,19 @@ function atualizarMemorial() {
 
 function configurarTema() {
   const checkbox = campo("themeCheckbox");
-  checkbox.checked = !window.matchMedia("(prefers-color-scheme: dark)").matches;
+  let temaSalvo = null;
+  try { temaSalvo = window.localStorage.getItem("landmensure-theme"); } catch { /* Armazenamento indisponível. */ }
+  checkbox.checked = temaSalvo === "light" || (temaSalvo !== "dark" && !window.matchMedia("(prefers-color-scheme: dark)").matches);
   const aplicar = () => {
     document.documentElement.removeAttribute("data-theme");
     if (!checkbox.checked) document.documentElement.setAttribute("data-theme", "dark");
+    campo("themeModeLabel").textContent = checkbox.checked ? "Modo claro" : "Modo escuro";
     checkbox.setAttribute("aria-label", checkbox.checked ? "Ativar tema escuro" : "Ativar tema claro");
   };
-  checkbox.addEventListener("change", aplicar);
+  checkbox.addEventListener("change", () => {
+    try { window.localStorage.setItem("landmensure-theme", checkbox.checked ? "light" : "dark"); } catch { /* Armazenamento indisponível. */ }
+    aplicar();
+  });
   aplicar();
 }
 
