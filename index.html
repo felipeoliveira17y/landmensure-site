@@ -17,7 +17,7 @@
             <div class="hero-topbar">
                 <a class="brand" href="#inicio" aria-label="Landmensure, início">
                     <img src="brand-mark.svg" alt="" width="48" height="48">
-                    <span class="brand-name">LAND<span>MEN</span>SURE<small>GEOINTELIGÊNCIA</small></span>
+                    <span class="brand-name">LAND<span>MEN</span>SURE<small>Área e memorial descritivo</small></span>
                 </a>
                 <label class="theme-switch-wrapper">
                     <input id="themeCheckbox" type="checkbox" aria-label="Ativar tema claro" />
@@ -27,31 +27,16 @@
             </div>
             <div class="hero-content" id="inicio">
                 <div class="hero-copy">
-                    <p class="eyebrow"><span class="eyebrow-line"></span> ANÁLISE DE PERÍMETRO</p>
-                    <h1>Da coordenada ao <em>memorial.</em></h1>
-                    <p class="hero-description">Importe o perímetro em KML, confira a área no mapa e prepare um memorial descritivo pronto para impressão.</p>
-                    <div class="hero-meta"><span>01 &nbsp; IMPORTE</span><span>02 &nbsp; CONFIRA</span><span>03 &nbsp; GERE</span></div>
-                </div>
-                <div class="hero-illustration" aria-hidden="true">
-                    <span class="orbit orbit-one"></span><span class="orbit orbit-two"></span>
-                    <svg viewBox="0 0 360 300" fill="none">
-                        <path d="m65 215 71-141 109 45 57 114-149 17Z" stroke="#cde6b4" stroke-width="2"/>
-                        <path d="m65 215 180-96m-109-45 17 176m92-131 57 114" stroke="#8eb79c" stroke-width="1" stroke-dasharray="4 7"/>
-                        <circle cx="65" cy="215" r="6" fill="#e8be79"/><circle cx="136" cy="74" r="6" fill="#e8be79"/>
-                        <circle cx="245" cy="119" r="6" fill="#e8be79"/><circle cx="302" cy="233" r="6" fill="#e8be79"/>
-                        <circle cx="153" cy="250" r="6" fill="#e8be79"/>
-                        <text x="120" y="57" fill="#d8e9cf" font-family="monospace" font-size="12">P-01</text>
-                        <text x="304" y="258" fill="#d8e9cf" font-family="monospace" font-size="12">P-04</text>
-                    </svg>
-                    <span class="hero-north">N <span>↑</span></span>
+                    <h1>Cálculo de área e memorial descritivo</h1>
+                    <p class="hero-description">Importe um arquivo KML para visualizar o perímetro, conferir as medidas e gerar os documentos da propriedade.</p>
                 </div>
             </div>
         </header>
 
         <section class="workspace-card setup-card" aria-labelledby="dadosTitulo">
             <div class="section-heading">
-                <div class="section-heading-main"><span class="section-index">01</span><div><p class="section-kicker">PREPARAÇÃO</p><h2 id="dadosTitulo">Dados da propriedade</h2></div></div>
-                <p>Preencha os campos que vão compor o documento.</p>
+                <div class="section-heading-main"><span class="section-index">01</span><div><h2 id="dadosTitulo">Dados da propriedade</h2></div></div>
+                <p>Informações que constarão no memorial.</p>
             </div>
             <div class="setup-layout">
                 <div class="form-grid">
@@ -87,63 +72,56 @@
 
                 <aside class="action-panel" aria-label="Ações do projeto">
                     <div class="action-panel-top">
-                        <span class="action-panel-symbol" aria-hidden="true">↗</span>
-                        <p class="section-kicker">ARQUIVO DE ENTRADA</p>
-                        <h3>Importar perímetro</h3>
-                        <p>Escolha um KML com um polígono. Confira as medidas antes de gerar o documento.</p>
+                        <h3>Arquivo KML</h3>
+                        <p>Selecione um arquivo com um único polígono. Depois confira as medidas e gere o memorial.</p>
                     </div>
                     <div class="actions">
                         <input type="file" id="fileInput" accept=".kml,application/vnd.google-earth.kml+xml" class="visually-hidden" aria-label="Selecionar arquivo KML">
 
                         <button id="btnAdicionarKml" class="btn-file-upload" type="button">
-                <svg aria-hidden="true" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-width="2"
-                        d="M13.5 3H12H8C6.34315 3 5 4.34315 5 6V18C5 19.6569 6.34315 21 8 21H11M13.5 3L19 8.625M13.5 3V7.625C13.5 8.17728 13.9477 8.625 14.5 8.625H19M19 8.625V11.8125"
-                        stroke-linejoin="round" stroke-linecap="round"></path>
-                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="2"
-                        d="M17 15V18M17 21V18M17 18H14M17 18H20"></path>
-                </svg>
-                Adicionar KML
-            </button>
+                            <svg aria-hidden="true" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" fill="none">
+                                <path d="M13.5 3H8C6.34 3 5 4.34 5 6v12c0 1.66 1.34 3 3 3h3M13.5 3 19 8.625M13.5 3v4.625c0 .55.45 1 1 1H19v3.19M17 15v6m-3-3h6"
+                                    stroke-linejoin="round" stroke-linecap="round"></path>
+                            </svg>
+                            Selecionar KML
+                        </button>
 
                         <button id="btnGerar" class="btn btn-success" type="button" disabled>
-                Gerar Memorial
-            </button>
+                            Gerar memorial
+                        </button>
 
                         <button id="btnCroqui" class="btn btn-info" type="button" disabled>
-                Imprimir Croqui
-            </button>
+                            Imprimir croqui
+                        </button>
 
                         <button id="btnImprMemorial" class="btn btn-primary" type="button" disabled>
-                Imprimir Memorial
-            </button>
+                            Imprimir memorial
+                        </button>
                     </div>
                     <p id="fileStatus" class="file-status" role="status" aria-live="polite">Nenhum arquivo selecionado.</p>
-                    <p class="action-footnote"><span aria-hidden="true">◈</span> Arquivo KML · até 10 MB</p>
+                    <p class="action-footnote">Formato .kml · até 10 MB</p>
                 </aside>
             </div>
         </section>
 
         <section class="workspace-card map-card" aria-labelledby="mapaTitulo">
             <div class="section-heading">
-                <div class="section-heading-main"><span class="section-index">02</span><div><p class="section-kicker">VISUALIZAÇÃO</p><h2 id="mapaTitulo">Perímetro no mapa</h2></div></div>
-                <p class="section-aside">Imagem de satélite · mapa interativo</p>
+                <div class="section-heading-main"><span class="section-index">02</span><div><h2 id="mapaTitulo">Perímetro no mapa</h2></div></div>
+                <p class="section-aside">Imagem de satélite</p>
             </div>
             <div class="map-frame">
                 <div id="map" role="region" aria-label="Mapa da propriedade"></div>
-                <div class="map-corner-label" aria-hidden="true"><span class="map-corner-dot"></span> ÁREA DE ESTUDO</div>
             </div>
             <div class="metrics-strip" aria-label="Resumo da propriedade">
-                <div class="metric"><span class="metric-icon" aria-hidden="true">▱</span><div><span class="metric-label">ÁREA TOTAL</span><strong id="metricArea">—</strong></div></div>
-                <div class="metric"><span class="metric-icon" aria-hidden="true">⌁</span><div><span class="metric-label">PERÍMETRO</span><strong id="metricPerimetro">—</strong></div></div>
-                <div class="metric"><span class="metric-icon" aria-hidden="true">◇</span><div><span class="metric-label">VÉRTICES</span><strong id="metricVertices">—</strong></div></div>
+                <div class="metric"><div><span class="metric-label">Área total</span><strong id="metricArea">—</strong></div></div>
+                <div class="metric"><div><span class="metric-label">Perímetro</span><strong id="metricPerimetro">—</strong></div></div>
+                <div class="metric"><div><span class="metric-label">Vértices</span><strong id="metricVertices">—</strong></div></div>
             </div>
         </section>
 
         <section class="workspace-card memorial-card" aria-labelledby="memorialTitulo">
             <div class="section-heading">
-                <div class="section-heading-main"><span class="section-index">03</span><div><p class="section-kicker">DOCUMENTO</p><h2 id="memorialTitulo">Memorial descritivo</h2></div></div>
+                <div class="section-heading-main"><span class="section-index">03</span><div><h2 id="memorialTitulo">Memorial descritivo</h2></div></div>
                 <p>Confira os dados antes de imprimir.</p>
             </div>
             <div id="memorialOutput" class="output-section is-status" role="status" aria-live="polite">Aguardando o carregamento do arquivo KML...</div>
@@ -152,7 +130,7 @@
 
     <footer class="site-footer">
         <div class="footer-inner">
-            <div class="footer-brand"><img src="brand-mark.svg" alt="" width="36" height="36"><span>LANDMENSURE<small>Do terreno ao documento.</small></span></div>
+            <div class="footer-brand"><img src="brand-mark.svg" alt="" width="36" height="36"><span>Landmensure<small>Cálculo de área e memorial</small></span></div>
             <div class="footer-links"><a href="https://wa.me/+558881197489" target="_blank" rel="noopener noreferrer">WhatsApp <span aria-hidden="true">↗</span></a><a href="https://www.instagram.com/landmensure/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a></div>
         </div>
     </footer>
